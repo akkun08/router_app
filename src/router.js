@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HelloWorld from "./components/HelloWorld.vue";
 import HelloJSX from "./components/HelloJSX.jsx";
+import HelloJsx from "./components/HelloJSX.jsx";
 
 export const router = createRouter({
   history: createWebHistory(),
@@ -8,12 +9,20 @@ export const router = createRouter({
     {
       path: "/",
       name: "index",
-      component: HelloWorld,
+      components: {
+        default: HelloWorld,
+        first: HelloWorld,
+        second: HelloJsx,
+      },
     },
     {
       path: "/jsx",
       name: "jsx",
-      component: HelloJSX,
+      components: {
+        default: HelloJSX,
+        first: HelloJSX,
+        second: HelloWorld,
+      },
     },
   ],
 });
