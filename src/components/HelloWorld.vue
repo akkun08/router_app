@@ -9,11 +9,11 @@
 import { ref, reactive } from "vue";
 
 export default {
-  neme: "HelloWorld",
+  name: "HelloWorld",
   setup(props, context) {
     const data = reactive({
       title: "HelloWorld",
-      msg: "This is HelloWorld componet.",
+      msg: "This is HelloWorld component.",
     });
     return {
       data,

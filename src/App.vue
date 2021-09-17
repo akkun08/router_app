@@ -1,15 +1,27 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3.0 + Vite" />
+  <div id="app">
+    <div>
+      <router-link to="/" class="btn btn-primary mx-2"> Go to Top </router-link>
+      <router-link to="/jsx" class="btn btn-warning"> Go to JSX </router-link>
+    </div>
+    <hr />
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "app",
+  created() {
+    console.log("***** App Created! *****");
+  },
+  mounted() {
+    console.log("----- App Mounted! -----");
+  },
+  data() {
+    return {
+      title: "Router",
+    };
+  },
+};
 </script>
